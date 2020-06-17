@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "arwinsurewin",
+    "MONGO_PASSWORD": "arwinsurewin001",
+    "MONGO_DB": "capstone3"
+  }
+}
