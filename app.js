@@ -9,10 +9,13 @@ const graphqlHTTP = require("express-graphql");
 const graphqlSchema = require("./gql-schema");
 
 /* Database Connection */
-mongoose.connect("mongodb://localhost:27017/foodhub", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://arwinsurewin:arwinsurewin001@cluster0-3rvif.mongodb.net/capstone3?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 mongoose.connection.once("open", () => {
   console.log("Now Connected to MongoDB atlas Server");
