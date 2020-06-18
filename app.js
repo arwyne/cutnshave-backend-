@@ -9,6 +9,11 @@ const graphqlHTTP = require("express-graphql");
 const graphqlSchema = require("./gql-schema");
 
 /* Database Connection */
+// mongoose.connect("mongodb://localhost:27017/foodhub", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 mongoose.connect(
   "mongodb+srv://arwinsurewin:arwinsurewin001@cluster0-3rvif.mongodb.net/capstone3?retryWrites=true&w=majority",
   {
@@ -54,9 +59,11 @@ app.post("/upload", (req, res) => {
   });
 });
 
+let port = process.env.PORT || 4000;
+
 /* Server Initialization */
-app.listen(4000, () => {
-  console.log("Now Serving on port 4000");
+app.listen(port, () => {
+  console.log("Now Serving on port " + port);
 });
 
 // mongoose.connect(
